@@ -1,0 +1,53 @@
+[package]
+name = "physics_tetris"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+colored = "2.0.0"
+hertz = "0.3.0"
+rand = "0.8.5"
+
+[dependencies.sdl2]
+version = "0.35.2"
+default-features = true
+features = ["gfx", "mixer"]
+
+#[package.metadata.vcpkg]
+#dependencies = ["sdl2", "sdl2-gfx", "sdl2-mixer"]
+#git = "https://github.com/microsoft/vcpkg"
+#rev = "261c458af6e3eed5d099144aff95d2b5035f656b"
+#
+#[package.metadata.vcpkg.target]
+#x86_64-pc-windows-msvc = { triplet = "x64-windows" }
+
+[build-dependencies]
+fs_extra = "1.3.0"
+
+[profile.release]
+opt-level = 3     # Optimize for size
+lto = true          # Enable link-time optimization
+codegen-units = 1   # Reduce number of codegen units to increase optimizations
+strip = true        # Strip symbols from binary*
+
+# ? --------------
+# ? ANDROID CONFIG
+# ? --------------
+
+# [lib]
+# name = "main"
+# crate-type = ["cdylib"]
+#
+# [target.aarch64-linux-android]
+# ar = "C:\\Users\\rober\\Documents\\Coding\\Tools\\android-ndk-r25c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\aarch64-linux-android-ar"
+# linker ="C:\\Users\\rober\\Documents\\Coding\\Tools\\android-ndk-r25c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\aarch64-linux-android26-clang.cmd "
+#
+# [target.armv7-linux-androideabi]
+# ar = "C:\\Users\\rober\\Documents\\Coding\\Tools\\android-ndk-r25c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\arm-linux-androideabi-ar"
+# linker = "C:\\Users\\rober\\Documents\\Coding\\Tools\\android-ndk-r25c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\armv7a-linux-androideabi26-clang.cmd "
+#
+# [target.i686-linux-android]
+# ar = "C:\\Users\\rober\\Documents\\Coding\\Tools\\android-ndk-r25c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\i686-linux-android-ar"
+# linker = "C:\\Users\\rober\\Documents\\Coding\\Tools\\android-ndk-r25c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\i686-linux-android26-clang.cmd "

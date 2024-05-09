@@ -1,0 +1,36 @@
+{
+  "eh-frame-header": false,
+  "abi": "eabi",
+  "arch": "arm",
+  "crt-static-respected": true,
+  "data-layout": "e-m:e-p:32:32-Fi8-i64:64-v128:64:128-a:0:32-n32-S64",
+  "default-dwarf-version": 2,
+  "default-uwtable": true,
+  "dynamic-linking": true,
+  "features": "+v7,+thumb-mode,+thumb2,+vfp3,-d32,-neon",
+  "has-rpath": true,
+  "is-builtin": false,
+  "is-like-android": true,
+  "llvm-target": "armv7-none-linux-android",
+  "max-atomic-width": 64,
+  "os": "android",
+  "position-independent-executables": true,
+  "pre-link-args": {
+    "gcc": [
+      "-march=armv7-a"
+    ]
+  },
+  "relro-level": "full",
+  "supported-sanitizers": [
+    "address"
+  ],
+  "supported-split-debuginfo": [
+    "packed",
+    "unpacked",
+    "off"
+  ],
+  "target-family": [
+    "unix"
+  ],
+  "target-pointer-width": "32"
+}

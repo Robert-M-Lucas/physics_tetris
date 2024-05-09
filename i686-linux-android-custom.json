@@ -1,0 +1,39 @@
+{
+  "eh-frame-header": false,
+  "arch": "x86",
+  "cpu": "pentiumpro",
+  "crt-static-respected": true,
+  "data-layout": "e-m:e-p:32:32-p270:32:32-p271:32:32-p272:64:64-f64:32:64-f80:32-n8:16:32-S128",
+  "default-dwarf-version": 2,
+  "default-uwtable": true,
+  "dynamic-linking": true,
+  "features": "+mmx,+sse,+sse2,+sse3,+ssse3",
+  "has-rpath": true,
+  "is-builtin": false,
+  "is-like-android": true,
+  "llvm-target": "i686-linux-android",
+  "max-atomic-width": 64,
+  "os": "android",
+  "position-independent-executables": true,
+  "relro-level": "full",
+  "stack-probes": {
+    "kind": "inline-or-call",
+    "min-llvm-version-for-inline": [
+      16,
+      0,
+      0
+    ]
+  },
+  "supported-sanitizers": [
+    "address"
+  ],
+  "supported-split-debuginfo": [
+    "packed",
+    "unpacked",
+    "off"
+  ],
+  "target-family": [
+    "unix"
+  ],
+  "target-pointer-width": "32"
+}
