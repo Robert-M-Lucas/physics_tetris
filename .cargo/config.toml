@@ -1,0 +1,4 @@
+#[build]
+#rustflags = [
+#    "-Clink-arg=/F 100000000"
+#]
